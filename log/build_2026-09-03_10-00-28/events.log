@@ -1,0 +1,77 @@
+[0.000000] (-) TimerEvent: {}
+[0.000356] (aws_robomaker_small_warehouse_world) JobQueued: {'identifier': 'aws_robomaker_small_warehouse_world', 'dependencies': OrderedDict()}
+[0.000390] (aws_robomaker_small_warehouse_world) JobStarted: {'identifier': 'aws_robomaker_small_warehouse_world'}
+[0.021975] (aws_robomaker_small_warehouse_world) JobProgress: {'identifier': 'aws_robomaker_small_warehouse_world', 'progress': 'cmake'}
+[0.023605] (aws_robomaker_small_warehouse_world) Command: {'cmd': ['/usr/bin/cmake', '/home/barath_ros2/warehouse_ws/src/aws-robomaker-small-warehouse-world', '-DCMAKE_INSTALL_PREFIX=/home/barath_ros2/warehouse_ws/install/aws_robomaker_small_warehouse_world'], 'cwd': '/home/barath_ros2/warehouse_ws/build/aws_robomaker_small_warehouse_world', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'barath_ros2', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{61c54bbd-c2c6-5271-96e7-009a87ff44bf}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/barath_ros2', 'OLDPWD': '/home/barath_ros2/warehouse_ws', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'barath_ros2', 'NAME': 'Dilan', 'WSL_INTEROP': '/run/WSL/4853_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/d/Grey hack/bin/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/java8path:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python312/Scripts/:/mnt/c/Python312/:/mnt/c/Program Files/Java/jdk1.8.0_202/bin:/mnt/c/Users/barat:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/PowerShell/7/:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/TypeScript(nodeJS)/:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Users/barat/AppData/Local/Microsoft/WindowsApps:/mnt/d/Arudiuno software/Microsoft VS Code/bin:/mnt/c/Users/barat/AppData/Roaming/npm:/mnt/d/Gray Hack:/mnt/c/Users/barat/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/barat/AppData/Local/Programs/Antigravity/bin:/snap/bin', 'WT_SESSION': 'afdc86a5-9038-4530-ac12-5382ddcbd1ed', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/home/barath_ros2/warehouse_ws/build/aws_robomaker_small_warehouse_world', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}), 'shell': False}
+[0.099095] (-) TimerEvent: {}
+[0.199794] (-) TimerEvent: {}
+[0.300254] (-) TimerEvent: {}
+[0.400982] (-) TimerEvent: {}
+[0.501379] (-) TimerEvent: {}
+[0.533165] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.601481] (-) TimerEvent: {}
+[0.701777] (-) TimerEvent: {}
+[0.802128] (-) TimerEvent: {}
+[0.902585] (-) TimerEvent: {}
+[1.003027] (-) TimerEvent: {}
+[1.103585] (-) TimerEvent: {}
+[1.196819] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[1.203709] (-) TimerEvent: {}
+[1.304070] (-) TimerEvent: {}
+[1.404381] (-) TimerEvent: {}
+[1.504854] (-) TimerEvent: {}
+[1.605337] (-) TimerEvent: {}
+[1.705669] (-) TimerEvent: {}
+[1.806009] (-) TimerEvent: {}
+[1.906306] (-) TimerEvent: {}
+[1.960679] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.006430] (-) TimerEvent: {}
+[2.106824] (-) TimerEvent: {}
+[2.206506] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.207058] (-) TimerEvent: {}
+[2.214166] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[2.216865] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.217874] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.307149] (-) TimerEvent: {}
+[2.312273] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[2.407348] (-) TimerEvent: {}
+[2.507633] (-) TimerEvent: {}
+[2.533029] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.540067] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.540445] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.540844] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.607768] (-) TimerEvent: {}
+[2.640862] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[2.707933] (-) TimerEvent: {}
+[2.800846] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[2.808263] (-) TimerEvent: {}
+[2.908797] (-) TimerEvent: {}
+[3.009491] (-) TimerEvent: {}
+[3.109808] (-) TimerEvent: {}
+[3.210194] (-) TimerEvent: {}
+[3.310500] (-) TimerEvent: {}
+[3.410887] (-) TimerEvent: {}
+[3.511172] (-) TimerEvent: {}
+[3.611441] (-) TimerEvent: {}
+[3.699794] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:11 (find_package):\n'}
+[3.700083] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  By not providing "Findgazebo_ros.cmake" in CMAKE_MODULE_PATH this project\n'}
+[3.700153] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[3.700205] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros", but CMake did not find one.\n'}
+[3.700253] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[3.700330] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  Could not find a package configuration file provided by "gazebo_ros" with\n'}
+[3.700380] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  any of the following names:\n'}
+[3.700426] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[3.700472] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'    gazebo_rosConfig.cmake\n'}
+[3.700518] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'    gazebo_ros-config.cmake\n'}
+[3.700565] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[3.700610] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  Add the installation prefix of "gazebo_ros" to CMAKE_PREFIX_PATH or set\n'}
+[3.700656] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros_DIR" to a directory containing one of the above files.  If\n'}
+[3.700702] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  "gazebo_ros" provides a separate development package or SDK, be sure it has\n'}
+[3.700747] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'  been installed.\n'}
+[3.700793] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\n'}
+[3.700839] (aws_robomaker_small_warehouse_world) StderrLine: {'line': b'\x1b[0m\n'}
+[3.700884] (aws_robomaker_small_warehouse_world) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.707110] (aws_robomaker_small_warehouse_world) CommandEnded: {'returncode': 1}
+[3.711569] (-) TimerEvent: {}
+[3.744614] (aws_robomaker_small_warehouse_world) JobEnded: {'identifier': 'aws_robomaker_small_warehouse_world', 'rc': 1}
+[3.755473] (-) EventReactorShutdown: {}

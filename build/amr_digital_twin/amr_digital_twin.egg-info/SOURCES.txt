@@ -1,0 +1,15 @@
+package.xml
+setup.cfg
+setup.py
+../../build/amr_digital_twin/amr_digital_twin.egg-info/PKG-INFO
+../../build/amr_digital_twin/amr_digital_twin.egg-info/SOURCES.txt
+../../build/amr_digital_twin/amr_digital_twin.egg-info/dependency_links.txt
+../../build/amr_digital_twin/amr_digital_twin.egg-info/requires.txt
+../../build/amr_digital_twin/amr_digital_twin.egg-info/top_level.txt
+../../build/amr_digital_twin/amr_digital_twin.egg-info/zip-safe
+amr_digital_twin/__init__.py
+launch/two_robot_warehouse.launch.py
+resource/amr_digital_twin
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
