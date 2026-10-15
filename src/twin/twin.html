@@ -2,48 +2,77 @@
 <html><head><meta charset="utf-8"><title>Digital Twin</title>
 <style>
 body{margin:0;overflow:hidden;font-family:sans-serif}
-#hud{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.9);padding:8px 12px;border-radius:6px;font-size:14px;line-height:1.5}
+#hud{position:absolute;top:10px;left:10px;background:rgba(255,255,255,.92);padding:8px 12px;border-radius:6px;font-size:14px;line-height:1.5}
 </style></head><body>
-<div id="hud"><b>Digital Twin: 2 AMRs</b><br><span id="status">connecting...</span><br>
-<span id="tb1">tb1: no data</span><br><span id="tb2">tb2: no data</span></div>
+<div id="hud"><b>Digital Twin: Warehouse + 2 AMRs</b><br>
+<span id="status">connecting...</span><br>
+<span id="load">loading warehouse...</span><br>
+<span id="tb1">tb1: no data</span><br><span id="tb2">tb2: no data</span><br>
+<label><input type="checkbox" id="roof"> show roof</label></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/ColladaLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/roslib@1.3.0/build/roslib.min.js"></script>
 <script>
-// Gazebo (x,y,z up) -> Three.js (x, z up->y, -y)
+// Gazebo (x, y, z-up)  ->  Three.js (x, z, -y)
 const scene = new THREE.Scene(); scene.background = new THREE.Color(0xdde3ea);
-const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 200);
-camera.position.set(0, 12, 12);
+const camera = new THREE.PerspectiveCamera(55, innerWidth/innerHeight, 0.1, 300);
+camera.position.set(0, 16, 14);
 const renderer = new THREE.WebGLRenderer({antialias:true});
 renderer.setSize(innerWidth, innerHeight); document.body.appendChild(renderer.domElement);
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
-scene.add(new THREE.AmbientLight(0xffffff, 0.7));
-const sun = new THREE.DirectionalLight(0xffffff, 0.6); sun.position.set(5,10,5); scene.add(sun);
-scene.add(new THREE.GridHelper(30, 30, 0x888888, 0xbbbbbb));
+scene.add(new THREE.HemisphereLight(0xffffff, 0x999999, 0.9));
+const sun = new THREE.DirectionalLight(0xffffff, 0.7); sun.position.set(8, 20, 10); scene.add(sun);
 
-// spawn pose of each robot in Gazebo (odom starts at 0,0 from here)
+// ---------- warehouse ----------
+const roofObjs = [];
+const cache = {};
+const colladaLoader = new THREE.ColladaLoader();
+function loadModel(name){
+  if (!cache[name]) cache[name] = new Promise((res, rej) => {
+    colladaLoader.load('models/'+name+'/meshes/'+name+'_visual.DAE', c => res(c.scene), undefined, rej);
+  });
+  return cache[name];
+}
+fetch('layout.json').then(r => r.json()).then(async items => {
+  let done = 0, failed = 0;
+  for (const it of items){
+    try {
+      const base = await loadModel(it.model);
+      const obj = base.clone(true);
+      obj.traverse(o => { if (o.isMesh){ const ms = Array.isArray(o.material) ? o.material : [o.material]; ms.forEach(m => m.side = THREE.DoubleSide); } });
+      const g = new THREE.Group(); g.add(obj);
+      g.position.set(it.x, it.z, -it.y);
+      g.rotation.y = it.yaw;
+      if (it.model.indexOf('Roof') >= 0){ g.visible = false; roofObjs.push(g); }
+      scene.add(g);
+    } catch(e){ failed++; console.log('failed', it.model, e); }
+    done++;
+    document.getElementById('load').textContent = 'warehouse: ' + done + '/' + items.length + (failed ? ' (failed: '+failed+')' : '');
+  }
+  document.getElementById('load').textContent = 'warehouse loaded (' + (items.length - failed) + '/' + items.length + ')';
+});
+document.getElementById('roof').addEventListener('change', e => roofObjs.forEach(g => g.visible = e.target.checked));
+
+// ---------- robots ----------
 const robots = {
-  tb1: {x0:-3, y0:2, yaw0:0,        color:0x1565a8, trail:[]},
-  tb2: {x0: 3, y0:2, yaw0:Math.PI,  color:0xc0392b, trail:[]}
+  tb1: {x0:-3, y0:2, yaw0:0,       color:0x1565a8, trail:[]},
+  tb2: {x0: 3, y0:2, yaw0:Math.PI, color:0xc0392b, trail:[]}
 };
-
 function place(name, wx, wy, wyaw){
   const r = robots[name];
   r.group.position.set(wx, 0, -wy);
   r.group.rotation.y = wyaw;
-  r.trail.push(new THREE.Vector3(wx, 0.02, -wy));
+  r.trail.push(new THREE.Vector3(wx, 0.03, -wy));
   if (r.trail.length > 3000) r.trail.shift();
   r.line.geometry.setFromPoints(r.trail);
 }
-
 for (const n in robots){
   const r = robots[n];
   r.group = new THREE.Group();
-  const body = new THREE.Mesh(new THREE.CylinderGeometry(0.25,0.25,0.3,24),
-                              new THREE.MeshStandardMaterial({color:r.color}));
+  const body = new THREE.Mesh(new THREE.CylinderGeometry(0.25,0.25,0.3,24), new THREE.MeshStandardMaterial({color:r.color}));
   body.position.y = 0.15; r.group.add(body);
-  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.1,0.25,12),
-                              new THREE.MeshStandardMaterial({color:0xffffff}));
+  const nose = new THREE.Mesh(new THREE.ConeGeometry(0.1,0.25,12), new THREE.MeshStandardMaterial({color:0xffffff}));
   nose.rotation.z = -Math.PI/2; nose.position.set(0.3,0.15,0); r.group.add(nose);
   scene.add(r.group);
   r.line = new THREE.Line(new THREE.BufferGeometry(), new THREE.LineBasicMaterial({color:r.color}));
@@ -51,26 +80,24 @@ for (const n in robots){
   place(n, r.x0, r.y0, r.yaw0);
 }
 
+// ---------- live link to ROS 2 ----------
 const ros = new ROSLIB.Ros({url:'ws://localhost:9090'});
-ros.on('connection', ()=>{ document.getElementById('status').textContent = 'connected to ROS 2'; });
-ros.on('error',      ()=>{ document.getElementById('status').textContent = 'connection error'; });
-ros.on('close',      ()=>{ document.getElementById('status').textContent = 'disconnected'; });
-
+ros.on('connection', () => document.getElementById('status').textContent = 'connected to ROS 2');
+ros.on('error',      () => document.getElementById('status').textContent = 'connection error');
+ros.on('close',      () => document.getElementById('status').textContent = 'disconnected');
 for (const n in robots){
   const r = robots[n];
-  new ROSLIB.Topic({ros:ros, name:'/'+n+'/odom', messageType:'nav_msgs/Odometry'})
-  .subscribe(m=>{
+  new ROSLIB.Topic({ros:ros, name:'/'+n+'/odom', messageType:'nav_msgs/Odometry'}).subscribe(m => {
     const ox = m.pose.pose.position.x, oy = m.pose.pose.position.y;
     const q = m.pose.pose.orientation;
     const oyaw = 2*Math.atan2(q.z, q.w);
     const wx = r.x0 + Math.cos(r.yaw0)*ox - Math.sin(r.yaw0)*oy;
     const wy = r.y0 + Math.sin(r.yaw0)*ox + Math.cos(r.yaw0)*oy;
     place(n, wx, wy, r.yaw0 + oyaw);
-    document.getElementById(n).textContent =
-      n+': x='+wx.toFixed(2)+'  y='+wy.toFixed(2)+'  yaw='+(r.yaw0+oyaw).toFixed(2);
+    document.getElementById(n).textContent = n+': x='+wx.toFixed(2)+'  y='+wy.toFixed(2)+'  yaw='+(r.yaw0+oyaw).toFixed(2);
   });
 }
 
-(function animate(){ requestAnimationFrame(animate); controls.update(); renderer.render(scene,camera); })();
-addEventListener('resize', ()=>{ camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
+(function animate(){ requestAnimationFrame(animate); controls.update(); renderer.render(scene, camera); })();
+addEventListener('resize', () => { camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); renderer.setSize(innerWidth, innerHeight); });
 </script></body></html>

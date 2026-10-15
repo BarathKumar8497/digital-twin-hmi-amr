@@ -1,0 +1,262 @@
+[
+ {
+  "name": "aws_robomaker_warehouse_RoofB_01_001",
+  "model": "aws_robomaker_warehouse_RoofB_01",
+  "x": 0.0,
+  "y": 0.0,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfF_01_001",
+  "model": "aws_robomaker_warehouse_ShelfF_01",
+  "x": -5.795143,
+  "y": -0.956635,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_WallB_01_001",
+  "model": "aws_robomaker_warehouse_WallB_01",
+  "x": 0.0,
+  "y": 0.0,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfE_01_001",
+  "model": "aws_robomaker_warehouse_ShelfE_01",
+  "x": 4.73156,
+  "y": 0.57943,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfE_01_002",
+  "model": "aws_robomaker_warehouse_ShelfE_01",
+  "x": 4.73156,
+  "y": -4.827049,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfE_01_003",
+  "model": "aws_robomaker_warehouse_ShelfE_01",
+  "x": 4.73156,
+  "y": -8.6651,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfD_01_001",
+  "model": "aws_robomaker_warehouse_ShelfD_01",
+  "x": 4.73156,
+  "y": -1.242668,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfD_01_002",
+  "model": "aws_robomaker_warehouse_ShelfD_01",
+  "x": 4.73156,
+  "y": -3.038551,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ShelfD_01_003",
+  "model": "aws_robomaker_warehouse_ShelfD_01",
+  "x": 4.73156,
+  "y": -6.750542,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_GroundB_01_001",
+  "model": "aws_robomaker_warehouse_GroundB_01",
+  "x": 0.0,
+  "y": 0.0,
+  "z": -0.090092,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_Lamp_01_005",
+  "model": "aws_robomaker_warehouse_Lamp_01",
+  "x": 0.0,
+  "y": 0.0,
+  "z": -4.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_Bucket_01_020",
+  "model": "aws_robomaker_warehouse_Bucket_01",
+  "x": 0.433449,
+  "y": 9.631706,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -1.563161
+ },
+ {
+  "name": "aws_robomaker_warehouse_Bucket_01_021",
+  "model": "aws_robomaker_warehouse_Bucket_01",
+  "x": -1.8321,
+  "y": -6.3752,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -1.563161
+ },
+ {
+  "name": "aws_robomaker_warehouse_Bucket_01_022",
+  "model": "aws_robomaker_warehouse_Bucket_01",
+  "x": 0.433449,
+  "y": 8.59,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -1.563161
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringA_01_016",
+  "model": "aws_robomaker_warehouse_ClutteringA_01",
+  "x": 5.708138,
+  "y": 8.616844,
+  "z": -0.017477,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringA_01_017",
+  "model": "aws_robomaker_warehouse_ClutteringA_01",
+  "x": 3.408638,
+  "y": 8.616844,
+  "z": -0.017477,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringA_01_018",
+  "model": "aws_robomaker_warehouse_ClutteringA_01",
+  "x": -1.491287,
+  "y": 5.222435,
+  "z": -0.017477,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -1.583185
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_027",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": 3.324959,
+  "y": 3.822449,
+  "z": -0.012064,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 1.563871
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_028",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": 5.54171,
+  "y": 3.816475,
+  "z": -0.015663,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -1.583191
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_029",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": 5.384239,
+  "y": 6.137154,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 3.15
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_030",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": 3.236,
+  "y": 6.137154,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 3.15
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_031",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": -1.573677,
+  "y": 2.301994,
+  "z": -0.015663,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": -3.133191
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringC_01_032",
+  "model": "aws_robomaker_warehouse_ClutteringC_01",
+  "x": -1.2196,
+  "y": 9.407,
+  "z": -0.015663,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 1.563871
+ },
+ {
+  "name": "aws_robomaker_warehouse_ClutteringD_01_005",
+  "model": "aws_robomaker_warehouse_ClutteringD_01",
+  "x": -1.634682,
+  "y": -7.811813,
+  "z": -0.319559,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_TrashCanC_01_002",
+  "model": "aws_robomaker_warehouse_TrashCanC_01",
+  "x": -1.592441,
+  "y": 7.71542,
+  "z": 0.0,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ },
+ {
+  "name": "aws_robomaker_warehouse_PalletJackB_01_001",
+  "model": "aws_robomaker_warehouse_PalletJackB_01",
+  "x": -0.276098,
+  "y": -9.481944,
+  "z": 0.023266,
+  "roll": 0.0,
+  "pitch": 0.0,
+  "yaw": 0.0
+ }
+]
